@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NeuralShed - Innovation at the Confluence of Technology. We bring robots to humans with cutting-edge solutions.">
+    <meta name="keywords" content="robotics, technology, innovation, AI, automation">
+    <meta name="theme-color" content="#40c057">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="NeuralShed">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+    <title>NeuralShed - Innovation at the Confluence of Technology</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Add React and Babel -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="./png/logo-no-background.png" alt="NeuralShed Logo" width="200" height="50">
+            </a>
+            <div class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <div class="dropdown">
+                    <a href="#industries">
+                    Industries
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                    <div class="dropdown-menu">
+                        <a href="#industries" onclick="handleIndustryClick('education')">Education</a>
+                        <a href="#industries" onclick="handleIndustryClick('healthcare')">Healthcare</a>
+                        <a href="#industries" onclick="handleIndustryClick('hospitality')">Hospitality</a>
+                        <a href="#industries" onclick="handleIndustryClick('corporate')">Corporate</a>
+                        <a href="#industries" onclick="handleIndustryClick('retail')">Retail</a>
+                    </div>
+                </div>
+                <a href="#technology">Service</a>
+                <a href="#interface-mockup">Use Case</a>
+                <a href="#footer">About us</a>
+            </div>
+            <div class="nav-right">
+                <a href="tel:+918789245550" class="phone-number">
+                    <i class="fas fa-phone"></i>
+                    +91 8789245550
+                </a>
+                <a href="#contact" class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="video-background">
+            <video autoplay loop muted playsinline>
+                <source src="./video/kassowrobots.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>
+                    <span class="hero-title">We bring</span>
+                    <span class="hero-highlight">robots</span><br>
+                    <span class="hero-highlight">to humans</span>
+                </h1>
+                <p class="hero-description">To the visionaries, technologists, and disruptor 
+                    <br>Join us at the frontier of human–robot synergy.</p>
+                <div class="hero-cta">
+                    <a href="#technology" class="cta-button">Explore Our Solutions</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="technology-section" id="technology">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">EXPLORE</span>
+                <h2>Our technology in use<span class="accent-dot">.</span></h2>
+                <p>Easy-to-integrate solutions for a wide range of applications and industries.</p>
+            </div>
+            <div class="tech-cards">
+                <a href="#digital-solutions" class="tech-card">
+                    <div class="tech-bg">
+                        <svg class="tech-illustration" viewBox="0 0 400 400">
+                            <path class="tech-line" d="M50,200 L350,200" />
+                            <path class="tech-line" d="M100,100 L300,300" />
+                            <path class="tech-line" d="M200,50 L200,350" />
+                        </svg>
+                    </div>
+                    <div class="tech-content">
+                        <h3>Digital Solutions</h3>
+                        <p>AI-driven software for automation in robotics, defense, and industry.</p>
+                        <span class="explore-btn">Explore<i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="#physical-systems" class="tech-card">
+                    <div class="tech-bg">
+                        <svg class="tech-illustration" viewBox="0 0 400 400">
+                            <circle class="tech-circle" cx="200" cy="200" r="50" />
+                            <circle class="tech-circle" cx="100" cy="100" r="30" />
+                            <circle class="tech-circle" cx="300" cy="300" r="30" />
+                        </svg>
+                    </div>
+                    <div class="tech-content">
+                        <h3>Physical Systems</h3>
+                        <p>Robust hardware solutions engineered for precision and reliability.</p>
+                        <span class="explore-btn">Explore<i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="industries-section">
+        <div class="scrolling-industries">
+            <div class="scrolling-text">
+                <span>Industries</span>
+                <span>Industries</span>
+                <span>Industries</span>
+                <span>Industries</span>
+                <span>Industries</span>
+                <span>Industries</span>
+                <span>Industries</span>
+                <span>Industries</span>
+                <span>Industries</span>
+                <span>Industries</span>
+            </div>
+            <div class="scrolling-text" aria-hidden="true">
+                <span>Industries</span>
+                <span>Industries</span>
+                <span>Industries</span>
+                <span>Industries</span>
+                <span>Industries</span>
+                <span>Industries</span>
+                <span>Industries</span>
+                <span>Industries</span>
+                <span>Industries</span>
+                <span>Industries</span>
+            </div>
+                </div>
+        <div id="industries-root"></div>
+    </section>
+
+    <!-- Interface Mockup Section -->
+    <section class="interface-mockup-section" id="interface-mockup">
+        <div class="interface-container">
+            <div class="interface-window">
+                <div class="interface-header">
+                    <div class="interface-nav">
+                        <div class="interface-user">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="interface-tabs">
+                            <div class="interface-tab active">ROBOTIC ARM</div>
+                            <div class="interface-tab">DRONES</div>
+                            <div class="interface-tab">AUV</div>
+                            <div class="interface-tab">BIONIC ARMS</div>
+                            <div class="interface-tab">AUTONOMOUS VEHICLES</div>
+                        </div>
+                    </div>
+                    <div class="interface-status">
+                        <div class="status-item">
+                            <i class="fas fa-wifi"></i>
+                            <span class="status-text">Connected</span>
+                        </div>
+                        <div class="battery-indicator">
+                            <i class="fas fa-battery-full battery-icon"></i>
+                            <span class="battery-level">100%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="interface-content">
+                    <div class="loading-circle"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2>Let's start working together.</h2>
+                <h3>Get in touch <span class="highlight">with us!</span></h3>
+            </div>
+            
+            <div class="contact-content">
+                    <form class="contact-form-fields" action="https://formsubmit.co/ryugandhar.me@gmail.com" method="POST">
+                    <input type="text" name="name" placeholder="Name" class="form-input" required>
+                    <input type="email" name="email" placeholder="Email" class="form-input" required>
+                    <textarea name="message" placeholder="Message" class="form-input message-input" required></textarea>
+                    <!-- Honeypot to prevent spam -->
+                    <input type="text" name="_honey" style="display: none">
+                    <!-- Disable captcha -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <!-- Customize success page -->
+                    <input type="hidden" name="_next" value="https://neuralshed.com">
+                    <input type="hidden" name="_subject" value="New message from NeuralShed website">
+                    <input type="hidden" name="_template" value="table">
+                    <button type="submit" class="send-button">
+                        <span>Send</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                    </form>
+
+                <div class="contact-info">
+                    <div class="hotline-box">
+                        <h4>Contact Us</h4>
+                        <a href="mailto:info@neuralshed.com" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            info@neuralshed.com
+                        </a>
+                        <a href="mailto:ryugandhar.me@gmail.com" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            ryugandhar.me@gmail.com
+                        </a>
+                        <a href="tel:+918789245550" class="contact-link">
+                            <i class="fas fa-phone"></i>
+                            +91 8789245550
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section" id="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-col brand-col">
+                    <div class="footer-logo">
+                        <img src="./png/logo-no-background.png" alt="NeuralShed Logo">
+                        <p class="footer-tagline">Dedicated To the visionaries, technologists, and disruptor</p>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Info</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#service">Service</a></li>
+                        <li><a href="#use-case">Use Case</a></li>
+                        <li><a href="#footer">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Industries</h3>
+                    <ul>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#hospitality">Hospitality</a></li>
+                        <li><a href="#retail">Retail</a></li>
+                        <li><a href="#healthcare">Healthcare</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Robots</h3>
+                    <ul>
+                        <li><a href="#">Robotic Arm</a></li>
+                        <li><a href="#">Drones</a></li>
+                        <li><a href="#">Bionic Arms</a></li>
+                        <li><a href="#">Autonomous Vehicles</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="mailto:info@neuralshed.com">info@neuralshed.com</a></li>
+                        <li><a href="mailto:ryugandhar.me@gmail.com">ryugandhar.me@gmail.com</a></li>
+                        <li><a href="tel:+918789245550">+91 8789245550</a></li>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="#terms">Terms and Conditions</a>
+                    <a href="#imprint">Imprint</a>
+                </div>
+                <p class="copyright">© 2024 NeuralShed. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/babel">
+        // Industries component and data
+        const tabData = [
+            {
+                id: 'education',
+                title: 'Education',
+                heading: 'Engaging learning',
+                description: [
+                    'The use of robots is rapidly becoming more commonplace all around us – in our workplaces, our homes, and even in our schools.',
+                    'The use of robots and simulation technologies have proven themselves to be worthy components of available educational resources.',
+                    'These technologies use in the education environment have shown their value in everyday learning and in the specialized education of students with disabilities.'
+                ],
+                image: './images/education-feature.jpg'
+            },
+            {
+                id: 'healthcare',
+                title: 'Healthcare',
+                heading: 'Robots in Healthcare',
+                description: [
+                    'Robots are becoming a part of life. It is making our life very easy as well as comfortable.',
+                    'Robotics in healthcare is taking place of humans as humans are trusting the robots for taking the food from one place to the other or for engaging the patients in some mental and physical exercise.',
+                    'The potential for robots in healthcare is vast. Just like in our every-day lives, they are increasingly a part of our healthcare eco-system.'
+                ],
+                image: './images/healthcare-feature.jpg'
+            },
+            {
+                id: 'hospitality',
+                title: 'Hospitality',
+                heading: 'Service robots',
+                description: [
+                    'Restaurant robots, robot waiters or hotel robots have gained lots of attention during the past two years due to the impact of COVID.',
+                    'Hospitality business owners can rely on restaurant and hotel robot to lend a helping hand as the service industry continues to see the labor shortage which has contributed to several issues such as longer wait times, lower service quality.',
+                    'The goal of robot food runners is to help elevate the service quality and ensure a better guest engagement.'
+                ],
+                image: './images/hospitality-feature.jpg'
+            },
+            {
+                id: 'corporate',
+                title: 'Corporate',
+                heading: 'Robots as ambassadors',
+                description: [
+                    'The first impression is everything, specially in business. Intelligent robots are able to perform multiple job responsibilities and reduce labor, such as welcoming guests, fun interaction, event promotion, and inquiries navigation, etc.',
+                    'Smart robots leave undoubtedly a positive first impression and a brand new experience to customers.'
+                ],
+                image: './images/corporate-feature.jpg'
+            },
+            {
+                id: 'retail',
+                title: 'Retail',
+                heading: 'In-store transformation',
+                description: [
+                    'With robots in stores, retailers already are at the beginning of the transformation.',
+                    'The robots free up workers from routine tasks and giving humans more time for customer interaction and elevate customer experience.',
+                    'But retail robots help also to collect valuable data about customers buying patterns.',
+                    'Such detailed data is incredibly valuable in retail, where understanding and anticipating consumer demand is essential.'
+                ],
+                image: './images/retail-feature.jpg'
+            }
+        ];
+
+        // Global function for industry tab switching
+        window.handleIndustryClick = (tabId) => {
+            const root = document.getElementById('industries-root');
+            const event = new CustomEvent('switchTab', { detail: { tabId } });
+            root.dispatchEvent(event);
+        };
+
+        function Industries() {
+            const [activeTab, setActiveTab] = React.useState('education');
+
+            React.useEffect(() => {
+                const root = document.getElementById('industries-root');
+                const handleSwitchTab = (event) => {
+                    setActiveTab(event.detail.tabId);
+                };
+                root.addEventListener('switchTab', handleSwitchTab);
+                return () => {
+                    root.removeEventListener('switchTab', handleSwitchTab);
+                };
+            }, []);
+
+            const handleTabClick = (tabId) => {
+                setActiveTab(tabId);
+            };
+
+            return (
+                <section id="industries" className="industries-section">
+                    <div className="container">
+                        <div className="section-header">
+                            <span className="section-label">INDUSTRIES</span>
+                            <h2>Transforming Industries<span className="accent-dot">.</span></h2>
+                            <p>Discover how our robotic solutions are revolutionizing different sectors.</p>
+                        </div>
+                        <div className="tab-container">
+                            <div className="tab-list" role="tablist">
+                                {tabData.map((tab) => (
+                                    <button
+                                        key={tab.id}
+                                        className={`tab-btn ${activeTab === tab.id ? 'active' : ''}`}
+                                        onClick={() => handleTabClick(tab.id)}
+                                        role="tab"
+                                        aria-selected={activeTab === tab.id}
+                                        aria-controls={`${tab.id}-content`}
+                                    >
+                                        {tab.title}
+                                    </button>
+                                ))}
+                            </div>
+                            <div className="tab-content">
+                                {tabData.map((tab) => (
+                                    <div 
+                                        key={tab.id}
+                                        className={`industry-content ${activeTab === tab.id ? 'active' : ''}`}
+                                        id={`${tab.id}-content`}
+                                        role="tabpanel"
+                                        aria-labelledby={tab.id}
+                                    >
+                                        <div className="content-wrapper">
+                                            <div className="content-text">
+                                                <h3>How can we help you?</h3>
+                                                <h2>{tab.heading}</h2>
+                                                {tab.description.map((paragraph, index) => (
+                                                    <p key={index}>{paragraph}</p>
+                                                ))}
+                                                <a href="#" className="learn-more">
+                                                    Learn more <i className="fas fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                            <div className="feature-image">
+                                                <img 
+                                                    src={
+                                                        tab.id === 'healthcare' ? 'brazo-robotico-1024x768.webp' : 
+                                                        tab.id === 'education' ? 'https___cms-image-bucket-production-ap-northeast-1-a7d2.s3.ap-northeast-1.amazonaws.com_images_7_6_1_3_603167-8-eng-GB_20170803_amazon-robot.avif' :
+                                                        tab.id === 'hospitality' ? 'Depositphotos_235207646_L.webp' :
+                                                        tab.id === 'corporate' ? 'MMH2111_IM_HoneywellSmartFlexDepalletizer_800p.jpg' :
+                                                        tab.id === 'retail' ? 'Badger-Technologies-Environmental-01-scaled-1.jpg' :
+                                                        tab.image
+                                                    } 
+                                                    alt={`${tab.title} robotics`} 
+                                                    loading="lazy"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            );
+        }
+
+        // Render the Industries component
+        const domContainer = document.getElementById('industries-root');
+        const root = ReactDOM.createRoot(domContainer);
+        root.render(<Industries />);
+    </script>
+</body>
+</html> 
